@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node":"V16.x"
+    "node":"v16.x"
   },
   "keywords": [],
   "author": "",
