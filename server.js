@@ -6,18 +6,15 @@ const headers = require("./utils/headers");
 const errorHandle = require("./utils/errorHandle");
 const successHandle = require("./utils/successHandle");
 
-dotenv.config({path:"./config.env"});
+dotenv.config({path: './config.env'});
 const DB = process.env.DATABASE.replace(
-    "<password>",
-    process.env.DATABASE_PASSWORD
-)
-mongoose.connect(DB)
-    .then(()=>{
-        console.log('資料連線成功')
-    })
-    .catch((error)=>{
-        console.log(error);
-    });
+  '<password>',
+  process.env.DATABASE_PASSWORD
+);
+
+mongoose
+  .connect(DB)
+  .then(() => console.log('資料庫連接成功'));
 
 
 const requestListener = async (req,res)=>{
