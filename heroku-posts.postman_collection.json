@@ -1,12 +1,12 @@
 {
 	"info": {
 		"_postman_id": "b4c1ac4e-9549-40e3-94f2-5f680c9bc3af",
-		"name": "heroku-todo",
+		"name": "heroku-posts",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "todos取得代辦",
+			"name": "TwoWeek 取得代辦",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -38,7 +38,7 @@
 			"response": []
 		},
 		{
-			"name": "todos 新增代辦",
+			"name": "TwoWeek  新增代辦",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -67,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "todos 刪除全部",
+			"name": "TwoWeek  刪除全部",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -87,7 +87,7 @@
 			"response": []
 		},
 		{
-			"name": "todos 刪除單筆",
+			"name": "TwoWeek 刪除單筆",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -117,7 +117,7 @@
 			"response": []
 		},
 		{
-			"name": "todos 編輯代辦",
+			"name": "TwoWeek  編輯代辦",
 			"request": {
 				"method": "PATCH",
 				"header": [],
