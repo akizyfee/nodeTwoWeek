@@ -123,7 +123,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"明天下班\"\r\n}",
+					"raw": "{\r\n    \"content\":\"明天下班\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
