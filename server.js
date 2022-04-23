@@ -47,9 +47,11 @@ const requestListener = async (req,res)=>{
         req.on("end",async()=>{
             try {
                 const id = req.url.split('/').pop();
-                const index = Post.findIndex(element => element.id == id);
                 const data = JSON.parse(body);
-                if(index == id) {
+                const posts = await Post.findByIdAndUpdate(id);
+                if(!posts) {
+                    errorHandle(res,400,"id錯誤");
+                }else {
                     let { content, image, createdAt } = data;
                     const posts = await Post.findByIdAndUpdate(id,
                         {
@@ -61,8 +63,6 @@ const requestListener = async (req,res)=>{
                         },
                     )
                     successHandle(res,200,posts, "修改成功");
-                }else {
-                    errorHandle(res,400,"id錯誤");
                 }
             }catch(error){
                 errorHandle(res,400,"找不到此筆資料");
@@ -75,12 +75,12 @@ const requestListener = async (req,res)=>{
         req.on("end",async()=>{
             try {
                 const id = req.url.split('/').pop();
-                const index = Post.findIndex(element => element.id == id);
-                if(index == id) {
+                const posts = await Post.findByIdAndUpdate(id);
+                if(!posts) {
+                    errorHandle(res,400,"id錯誤");
+                }else {
                     const posts = await Post.findByIdAndDelete(id);
                     successHandle(res,200,posts, "刪除成功");
-                }else {
-                    errorHandle(res,400,"id錯誤");
                 }
             } catch (error) {
                 errorHandle(res,400,"找不到此筆資料");
